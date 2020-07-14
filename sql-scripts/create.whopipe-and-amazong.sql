@@ -7,17 +7,17 @@ CREATE TABLE IF NOT EXISTS whopipe_video_views (
 
 DROP TYPE IF EXISTS department;
 CREATE TYPE department AS ENUM (
-    'Electronics',
-    'Cleaning',
-    'Grocery',
-    'Furniture',
-    'Stationery',
-    'Clothing',
-    'DIY',
-    'Sports',
-    'Homeware',
-    'Games',
-    'Transport'
+  'Electronics',
+  'Cleaning',
+  'Grocery',
+  'Furniture',
+  'Stationery',
+  'Clothing',
+  'DIY',
+  'Sports',
+  'Homeware',
+  'Games',
+  'Transport'
 );
 
 CREATE TABLE IF NOT EXISTS amazong_products (
