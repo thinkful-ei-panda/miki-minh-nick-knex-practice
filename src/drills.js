@@ -52,4 +52,4 @@ function getTotalPriceByCategory() {
         .finally(() => db.destroy());
 }
 
-getTotalPriceByCategory();
+getTotalPriceByCategory(); 
