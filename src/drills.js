@@ -27,4 +27,29 @@ function getAllItemsPaginated(pageNumber, limit) {
         .finally(() => db.destroy())
 };
 
-getAllItemsPaginated(2, 31)
+// getAllItemsPaginated(2, 31)
+
+function getRowsNewerThan(daysAgo) {
+    db('shopping_list')
+        .select('*')
+        .where('date_added',
+            '>',
+            db.raw(`now() -'?? days'::INTERVAL`, daysAgo)
+        )
+        .then(res => console.log(res))
+        // .catch(err => console.warning(err.message))
+        .finally(() => db.destroy());
+}
+
+// getRowsNewerThan(14);
+
+function getTotalPriceByCategory() {
+    db('shopping_list')
+        .select('item_name')
+        .sum('price AS total_price')
+        .groupBy('category')
+        .then(res => console.log(res))
+        .finally(() => db.destroy());
+}
+
+getTotalPriceByCategory();
