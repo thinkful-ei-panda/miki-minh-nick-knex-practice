@@ -44,7 +44,7 @@ function getProductsWithImages() {
     .then(result => {
       console.log(result);
     });
-}
+};
 
 getProductsWithImages();
 
@@ -66,6 +66,6 @@ function mostPopularVideosForDays(days) {
     .then(result => {
       console.log(result);
     });
-}
+};
 
 mostPopularVideosForDays(30);
