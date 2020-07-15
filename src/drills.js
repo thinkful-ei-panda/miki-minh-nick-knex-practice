@@ -45,7 +45,7 @@ function getRowsNewerThan(daysAgo) {
 
 function getTotalPriceByCategory() {
     db('shopping_list')
-        .select('item_name')
+        .select('category')
         .sum('price AS total_price')
         .groupBy('category')
         .then(res => console.log(res))
